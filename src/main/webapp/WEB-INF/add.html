@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/add_tc.css" />
+	</head>
+
+	<body>
+		<div class="main">
+			<div id="add_tc">
+				<p>训练营信息管理</p>
+				<hr size="3" width="60%" />
+				<form action="/toIndex.do" method="post">
+					教室:&nbsp;&nbsp;&nbsp;
+					<input type="text" id="" class="in_class" name="className"/><br /> 课程:&nbsp;&nbsp;&nbsp;
+					<select id="course" name="type">
+						<option value="A">Java</option>
+						<option value="B">Web</option>
+						<option value="C">UID</option>
+					</select>
+					<br /> 讲师:&nbsp;&nbsp;&nbsp;
+					<input type="text" id="" class="in_class" name="username"/><br /> 布局:&nbsp;&nbsp;
+					<img src="img/index_admin/seat_A.png" />&nbsp; A
+					<input type="radio" value="A" name="seatType" class="seatType" />
+					<img src="img/index_admin/seat_B.png" />&nbsp; B
+					<input type="radio" value="B" name="seatType" class="seatType" /><br />
+					<input type="submit" value="保存" class="btn" />
+					<input type="button" value="取消" class="btn" onclick="hidden_add_tc()" />
+				</form>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		function hidden_add_tc() {
+			console.log(2122313);
+			$('.main').removeClass("global");
+			$('#add_tc').removeClass("add_iframe_show");
+			$('#add_tc').css('display', 'none');
+		}
+	</script>
+</html>

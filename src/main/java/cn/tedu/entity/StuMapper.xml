@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.tedu.dao.StuDAO">
+	<!-- 插入学生信息 -->
+	<insert id="insertStu" parameterType="cn.tedu.entity.StudentInfo">
+		insert into tcs_student  
+		values(0,true,#{userId},#{name},#{type},#{source},#{degree},
+		#{major},#{basic},#{preSituation},0,#{learnPro},false)
+	</insert>
+	<select id="seatstulist" parameterType="int" resultType="cn.tedu.entity.StudentInfo">
+		SELECT
+		a.name,
+		a.type,
+		a.source,
+		a.major,
+		a.degree,
+		a.basic,
+		a.studyTime,
+		a.learnPro,
+		b.username
+		FROM
+		tcs_student AS a ,
+		tcs_user AS b
+		WHERE
+		a.userId = b.userId AND
+		a.studentId = #{studentId}
+
+	</select>
+	<update id="removestu" parameterType="int">
+		UPDATE tcs_student SET seatState=FALSE WHERE studentId=#{studentId}
+	</update>
+	<select id="unseatstu" resultType="cn.tedu.entity.StudentInfo">
+		SELECT
+		tcs_student.studentId,
+		tcs_student.`name`
+		FROM
+		tcs_student
+		WHERE
+		tcs_student.state = true AND
+		tcs_student.seatState = false
+	</select>
+	<update id="bookingstu" parameterType="int">
+		UPDATE tcs_student SET seatState=TRUE WHERE studentId=#{studentId}
+	</update>
+	<select id="stuList" resultType="cn.tedu.entity.StudentInfo">
+		select 
+		a.name,
+		a.type,
+		a.source,
+		a.major,
+		a.degree,
+		a.basic,
+		a.studyTime,
+		a.learnPro,
+		a.studentId,
+		a.userId,
+		b.username
+		FROM
+		tcs_student AS a ,
+		tcs_user AS b
+		where 
+		a.userId = b.userId
+		and state=true
+		order by studentId desc
+		limit #{startIndex},#{pageSize}
+		
+	</select>
+	<select id="getRowCount" resultType="int">
+		select count(*) from tcs_student
+		<where>
+			<if test="name!=null and name!=''">
+				name like concat('%',#{name},'%')
+			</if>
+		</where>
+	</select>
+	<update id="updateStu" parameterType="cn.tedu.entity.StudentInfo">
+		update tcs_student
+		set name=#{name},major=#{major},learnPro=#{learnPro},degree=#{degree},
+		type=#{type},source=#{source},basic=#{basic},studyTime=#{studyTime},
+		preSituation=#{preSituation},userId=#{userId}
+		where studentId=#{studentId}
+	</update>
+	<select id="findUserByJobId" resultType="cn.tedu.entity.User">
+		select * 
+		from tcs_user
+		where jobId=3
+	</select>
+	<update id="deleteStu" parameterType="int">
+		UPDATE tcs_student SET state=false WHERE studentId=#{studentId}
+	</update>
+</mapper>	

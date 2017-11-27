@@ -1,0 +1,141 @@
+#add_tc{
+	display: none;
+	border: 1px solid #b3b3b3;
+	background: white;
+	border-radius:10px;
+	position: absolute;
+	top: 18%;
+	left: 42%;
+	width: 32%;
+	height: 62%;
+}
+#add_tc .in_class{
+	color: #c4c4c4;
+	width: 65%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 43px;
+	*height: 43px;
+	padding: 2%;
+	padding-left: 4%;
+	font-size: 16px;
+	font-family: "宋体";
+	color: #707070;
+	border-radius: 10px;
+	border: 2px solid #8ecdff;
+}
+#course_select{
+	border: 2px solid #8ecdff;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 65%;
+	height: 43px;
+	*height: 43px;
+	padding: 2%;
+	margin-top: 7%;
+	font-size: 16px;
+	font-family: "consolas";
+	border-radius: 10px;
+	
+}
+#add_tc p{
+	text-align: center;
+	margin-top: 4%;
+	font-family: "微软雅黑";
+	color: #424242;
+}
+#add_tc form{
+	height: 70%;
+	vertical-align:auto;
+	font-family: "宋体";
+	font-size: 20px;
+	font-weight: 800;
+	padding: 4%;
+	margin-left: 10%;
+	color: #424242;
+}
+.in_class{
+	width: 70%;
+	height: 15%;
+	font-size: 22px;
+	margin-top: 7%;
+}
+#add_tc img{
+	margin-top: 4%;
+	margin-left: 2%;
+}
+.seatType{
+	width: 15px;
+	height: 15px;
+}
+.btn{
+	width: 25%;
+	height: 35px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	letter-spacing: 5px;
+	border: 1px solid #b5b5b5;
+	background: #8dcafb;
+	border-radius: 10px;
+	outline: none;
+	color: white;
+	margin-top: 5%;
+	margin-left: 15%;
+}
+.btn:hover{
+	background: #1197db;
+}
+/*修改训练营*/
+#update_tc{
+	display: none;
+	border: 1px solid #b3b3b3;
+	background: white;
+	border-radius:10px;
+	position: absolute;
+	top: 18%;
+	left: 42%;
+	width: 32%;
+	height: 62%;
+}
+#update_tc .in_class{
+	color: #c4c4c4;
+	width: 65%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 43px;
+	*height: 43px;
+	padding: 2%;
+	padding-left: 4%;
+	font-size: 16px;
+	font-family: "宋体";
+	color: #707070;
+	border-radius: 10px;
+	border: 2px solid #8ecdff;
+}
+#update_tc p{
+	text-align: center;
+	margin-top: 4%;
+	font-family: "微软雅黑";
+	color: #424242;
+}
+#update_tc form{
+	height: 70%;
+	vertical-align:auto;
+	font-family: "宋体";
+	font-size: 20px;
+	font-weight: 800;
+	padding: 4%;
+	margin-left: 10%;
+	color: #424242;
+}
+#update_tc img{
+	margin-top: 4%;
+	margin-left: 2%;
+}
+
+
+
+

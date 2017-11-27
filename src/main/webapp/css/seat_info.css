@@ -1,0 +1,156 @@
+.seatInfo{
+	display: none;
+	background: white;
+	border: 1px #e5e5e5 solid;
+	border-radius: 10px;
+	margin: 0 auto;
+	float: right;
+	width: 70%;
+	height: 600px;
+	margin-right: 8%;
+	margin-top: 2%;
+}
+.seatInfo *{
+	/*border: 2px solid red;*/
+}
+/*header，班级，数量讲师创建时间*/
+.seatInfo_header{
+	margin-left: 4%;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	font-weight: 100;
+	letter-spacing: 2px;
+	font-weight: 100;
+	margin-top: 1%;
+}
+.seatInfo_header *{
+	margin-right: 6%;
+}
+/*图例*/
+.legend{
+	height: 5%;
+	margin-left: 4%;
+	margin-top: 0.8%;
+}
+.legend img{
+	width: 25px;
+	height: 25px;
+}
+.legend *{
+	vertical-align: middle;
+	font-size: 16px;
+	font-family: "宋体";
+	letter-spacing: 2px;
+}
+.legend_2{
+	margin-left: 5%;
+}
+.seat_states{
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+/*投影仪*/
+.seat_states_hr *{
+	display: inline;
+}
+.seat_states_hr{
+	margin-top: 2%;
+	display: flex;
+	align-items: center;
+}
+.seat_states_hr span{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	letter-spacing: 5px;
+	margin-left: 3%;
+}
+.seat_states_hr hr{
+	width: 38%;
+	margin-top: 2%;
+	margin-left: 3%;
+	color: #000000;
+}
+/*座位*/
+.seat_details{
+	float: left;
+	width: 90%;
+	height: 80%;
+	margin-left: 4%;
+	margin-top: 1%;
+}
+.seat_details > div{
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	font-family: "宋体";
+	font-size: 14px;
+}
+/*座位宽高*/
+.seat_details > div{
+	/*border: 1px solid red;*/
+	width: 15%;
+	height: 14%;
+	margin-bottom: 1.3% ;
+}
+.seat_details > div span{
+	float: left;
+	margin-left: 50%;
+	margin-top: 12%;
+}
+/*左边座位*/
+.seat_details .left{
+	float: left;
+	margin-right: 3%;
+}
+/*右边座位*/
+.seat_details .right{
+	float: right;
+	margin-left: 3%;
+}
+
+
+/*学员详细信息*/
+.stu_details{
+	width: 20%;
+	height: 75%;
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	vertical-align: middle;
+	background-image: url(../img/seat/stu_info_back.png);
+	background-size: cover;
+	border-bottom: 1px solid #7D7D7D;
+	border-radius: 12px;
+}
+.stu_details_ture{
+	
+	margin-top: -10%;
+	padding-left: 5%;
+	padding-top: 12%;
+	
+}
+.stu_details_ture span{
+	width: 40%;
+	border-bottom: 1px solid #7d7d7d;
+	text-align: center;
+}
+.people_ico{
+	width: 20%;
+	margin-left: 40%;
+	margin-top: -10%;
+}
+.stu_details div{
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+.stu_details span{
+	display: inline-block;
+	margin-top: 8%;
+}
+.stu_delete_ico{
+	width: 20%;
+	margin-left: 37%;
+	margin-top: 8%;
+}

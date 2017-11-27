@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	/*border: 1px solid red;*/
+}
+body,html {
+	height: 768px;
+	background-image: url(../img/login/background_image.jpg);
+	background-size: 100%;
+	background-position-x: center;
+	background-repeat-y: no-repeat;
+	overflow: hidden;
+}
+
+header {
+	margin-top: 1%;
+	margin-left: 18%;
+	width: 8.5%;
+	height: 5%;
+	background-image: url(../img/login/tedu_logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#login {
+	width: 28%;
+	color: white;
+	font-family: "微软雅黑";
+	position: relative;
+	left: 36%;
+	top: 15%;
+}
+/*设置标题字体*/
+#sys_title_C {
+	font-size: 30px;
+	letter-spacing: 10px;
+	text-align: center;
+}
+#sys_title_E {
+	margin-top: 4%;
+	top: 60%;
+	font-size: 16px;
+	text-align: center;
+}
+/*设置图标位置*/
+.admin_ico,.pwd_ico {
+	position: relative;
+	margin-left: 2%;
+	margin-top: 10%;
+}
+
+form {
+	
+	width: 100%;
+	float: right;
+	/*width: 90%;*/
+	margin-top: -19%;
+	margin-right: -12%;
+}
+
+form span {
+	/*background-color: red;*/
+	font-size: 4px;
+	color: white;
+	border-radius: 2px;
+	padding: 2px;
+}
+
+form input {
+	color: #8C8C8C;
+	width: 78%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 45px;
+	*height: 45px;
+	margin-top: 8%;
+	padding: 2%;
+	padding-left: 4%;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	border-radius: 10px;
+	border: none;
+	background: #bccfe0;
+}
+
+form input:focus {
+	border: 2px solid #b0dbff;
+	border-radius: 10px;
+	background:#FFFFFF
+}
+#password{
+	display: none;
+}
+#login_do {
+	opacity: 1;
+	color: white;
+	font-size: 18px;
+	letter-spacing: 10px;
+	background-color: #6cade2;
+}
+#login_do:hover{
+	opacity: 1;
+	background-color: #89c8fc;
+	border: 2px solid #89c8fc;
+}
+
+#miss_pwd {
+	background: none;
+	border: none;
+	color: white;
+	margin-left: 60%;
+}
+#miss_pwd:hover{
+	font-size: 55%;
+}
+footer {
+	width: 20%;
+	height: 20px;
+	position: absolute;
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 10px;
+	margin: 29.5% 45%;
+}

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+		<title>管理员主页</title>
+		<link rel="stylesheet" type="text/css" href="css/index_admin.css" />
+		<link rel="stylesheet" type="text/css" href="css/add_tc.css" />
+		<link rel="stylesheet" type="text/css" href="css/seat_info.css" />
+		<link rel="stylesheet" type="text/css" href="css/table.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookingSeats.css" />
+	</head>
+
+	<body id="body">
+		<div class="main">
+			<!--logo，菜单-->
+			<header>
+				<!--------------------------------------------------->
+				<img src="img/index_admin/logo.png" id="logo" />
+				<!--------------------------------------------------->
+				<section>
+					<img src="img/index_admin/admin.png" id="admin_img" />
+					<label>张宏杰</label>
+					<img src="img/index_admin/update.png" id="" />
+					<label onclick="">修改密码</label>
+					<img src="img/index_admin/exit.png" />
+					<label onclick="javascript:location='login.html'">退出登录</label>
+				</section>
+			</header>
+			<!--main菜单-->
+			<div id="menu">
+				<ol id="menu_ul">
+					<!--------------------------------------------------->
+					<li onclick="menu_li_addCss(this)"><div></div><img src="img/index_admin/tc_manage_before.png"/><span>训练营管理</span></li>
+					<li onclick="menu_li_addCss(this)"><div></div><img src="img/index_admin/user_mana_before.png"/><span>用户信息管理</span></li>
+					<li onclick="menu_li_addCss(this)"><div></div><img src="img/index_admin/user_mana_before.png"/><span>学员信息管理</span></li>
+					<!--------------------------------------------------->
+				</ol>
+			</div>
+			<!--main-->
+			<div id="main_info">
+				<!--一个训练营-->
+				<div class="tcInfo" id="">
+					<!--装背景图-->
+					<div class="tcInfo_img" style="background-image:url(img/index_admin/java.png);">
+						<!--主要信息-->
+						<div class="main_mess">
+							<span id="course">java</span><br />
+							<label>讲师:</label>
+							<span id="teacher">张宏杰</span><br />
+							<label>教室:</label>
+							<span id="classroom">教室十三</span><br />
+							<label>已座/总数:</label>
+							<span id="num_mess">25/30</span><br />
+						</div>
+						<!--创建时间-->
+						<!--<div class="create_time">
+							<label>创建时间:</label>
+							<span id="created_time">
+								2017/02/12
+							</span><br />
+						</div>-->
+					</div>
+					<!--操作图标-->
+					<div class="option_img">
+						<img src="img/index_admin/edit.png" /><label>修改</label>
+						<img src="img/index_admin/delete.png" /><label onclick="if(confirm('是否删除?')){alert('删除成功');}">删除</label>
+					</div>
+				</div>
+				<!--一个训练营-->
+				<div class="tcInfo">
+					<!--装背景图-->
+					<div class="tcInfo_img" style="background-image:url(img/index_admin/web.png);">
+						<!--主要信息-->
+						<div class="main_mess">
+							<span id="course">Web</span><br />
+							<label>讲师:</label>
+							<span id="teacher">张宏杰</span><br />
+							<label>教室:</label>
+							<span id="classroom">教室十三</span><br />
+							<label>已座/总数:</label>
+							<span id="num_mess">25/30</span><br />
+						</div>
+						<!--创建时间-->
+						<!--<div class="create_time">
+							<label>创建时间:</label>
+							<span id="created_time">
+								2017/02/12
+							</span><br />
+						</div>-->
+					</div>
+					<!--操作图标-->
+					<div class="option_img">
+						<img src="img/index_admin/edit.png" />修改
+						<img src="img/index_admin/delete.png" />删除
+					</div>
+				</div>
+				<!--一个训练营-->
+				<div class="tcInfo">
+					<!--装背景图-->
+					<div class="tcInfo_img" style="background-image:url(img/index_admin/java.png);">
+						<!--主要信息-->
+						<div class="main_mess">
+							<span id="course">java</span><br />
+							<label>讲师:</label>
+							<span id="teacher">张宏杰</span><br />
+							<label>教室:</label>
+							<span id="classroom">教室十三</span><br />
+							<label>已座/总数:</label>
+							<span id="num_mess">25/30</span><br />
+						</div>
+						<!--创建时间-->
+						<!--<div class="create_time">
+							<label>创建时间:</label>
+							<span id="created_time">
+								2017/02/12
+							</span><br />
+						</div>-->
+					</div>
+					<!--操作图标-->
+					<div class="option_img">
+						<img src="img/index_admin/edit.png" />修改
+						<img src="img/index_admin/delete.png" />删除
+					</div>
+				</div>
+				<!--一个训练营-->
+				<div class="tcInfo">
+					<!--装背景图-->
+					<div class="tcInfo_img" style="background-image:url(img/index_admin/UID.png);">
+						<!--主要信息-->
+						<div class="main_mess">
+							<span id="course">UID</span><br />
+							<label>讲师:</label>
+							<span id="teacher">张宏杰</span><br />
+							<label>教室:</label>
+							<span id="classroom">教室十三</span><br />
+							<label>已座/总数:</label>
+							<span id="num_mess">25/30</span><br />
+						</div>
+						<!--创建时间-->
+						<!--<div class="create_time">
+							<label>创建时间:</label>
+							<span id="created_time">
+								2017/02/12
+							</span><br />
+						</div>-->
+					</div>
+					<!--操作图标-->
+					<div class="option_img">
+						<img src="img/index_admin/edit.png" />修改
+						<img src="img/index_admin/delete.png" />删除
+					</div>
+				</div>
+				<!--增加训练营图标-->
+				<div class="tcInfo">
+					<!--装背景图-->
+					<div class="tcInfo_img" onclick="show_add_tc();" style="background-image:url(img/index_admin/add.png);">
+					</div>
+				</div>
+			</div>
+			<!--增加训练营-->
+			<!-- -------------------------------------------------------->
+			<div id="add_tc">
+				<p>训练营信息管理</p>
+				<form action="index_admin.html" method="post">
+					教室:
+					<input type="text" id="" class="in_class" /><br /> 课程:
+					<select id="course_select">
+						<option>Java</option>
+						<option>Web</option>
+						<option>UID</option>
+					</select>
+					<br /> 讲师:
+					<input type="text" id="" class="in_class" /><br /> 布局:
+					<img src="img/index_admin/seat_A.png" />
+					<input type="radio" value="A" name="seatType" class="seatType" />
+					<img src="img/index_admin/seat_B.png" />
+					<input type="radio" value="B" name="seatType" class="seatType" /><br />
+					<input type="submit" value="保存" class="btn" />
+					<input type="button" value="取消" class="btn" onclick="hidden_add_tc()" />
+				</form>
+			</div>
+			<!-- -------------------------------------------------------->
+			<!--11/9号-->
+			<!--修改密码-->
+			<div class="update_pwd">
+				<h4>修改密码</h4> 
+				<div class="in_info">
+					<img src="img/login/password_ico.png" />
+					<input type="text" id="update_pwd_info" value="请输入新密码" 
+					onfocus="javascript:this.style.display = 'none';
+					document.getElementById('password').style.display = 'inline';
+					document.getElementById('password').focus();
+					"/>
+				<input type="password" id="password" 
+					onblur="javascript:if(this.value == null || this.value == ''){this.style.display = 'none';
+						document.getElementById('update_pwd_info').style.display = 'inline';
+					}"/>
+				</div>
+				<div class="submit_newpwd">
+					<input type="submit" value="保存" class="btn_update" />
+					<input type="button" value="取消" class="btn_update" />
+				</div>
+			</div>
+			<!--座位详细信息-->
+			<div class="seatInfo">
+				<!--教室详细信息编号-->
+				<div class="seatInfo_header">
+					<span>教室：<span>教室十三</span> 讲师：
+					<span>张宏杰</span> 已定/剩余：
+					<span>2/29</span> 创建时间：
+					<span>2017-12-23</span>
+					</span>
+				</div>
+				<!--图例-->
+				<!-------------------------------------------------------->
+				<div class="legend">
+					<span class="legend_1"><img src="img/seat/legend_available.png" />&nbsp;可选座位</span>
+					<span class="legend_2"><img src="img/seat/legend_unAvailable.png" />&nbsp;已选座位</span>
+					<span class="legend_2"><img src="img/seat/legend_D.png" />&nbsp;D阶段</span>
+				</div>
+				<!-------------------------------------------------------->
+				<!--座位信息-->
+				<div class="seat_states">
+					<!--投影仪标记-->
+					<div class="seat_states_hr">
+						<hr /><span>投影仪</span>
+						<hr />
+					</div>
+					<!--座位-->
+					<div class="seat_details">
+						<!--第一行-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="left" style="background-image: url(img/seat/unAvailable.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<!--中间-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/D.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div><br />
+						<!--第二行-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="left" style="background-image: url(img/seat/unAvailable.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<!--中间-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/D.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div><br />
+						<!--第三行-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="left" style="background-image: url(img/seat/unAvailable.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<!--中间-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/D.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div><br />
+						<!--第四行-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="left" style="background-image: url(img/seat/unAvailable.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<!--中间-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/D.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div><br />
+						<!--第五行-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="left" style="background-image: url(img/seat/unAvailable.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<!--中间-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/D.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div><br />
+						<!--第六行-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="left" style="background-image: url(img/seat/unAvailable.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<!--中间-->
+						<div class="left" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/available.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div>
+						<div class="right" style="background-image: url(img/seat/D.png);">
+							<span class="stu_name">张是三</span><br /><span class="stu_cou">廖说维</span>
+						</div><br />
+					</div>
+				</div>
+				<!-------------------------------------------------------->
+				<!--学员信息-->
+				<div class="stu_details">
+					<div>
+						<img src="img/seat/people_ico.png" class="people_ico"/>
+					</div>
+					<div class="stu_details_ture">
+						座位编号：<span>01</span><br /> 姓名：
+						<span>张宏杰</span><br /> 课程顾问：
+						<span>lalala</span><br /> 类型：
+						<span>A</span><br /> 来源：
+						<span>B</span><br /> 学历：
+						<span>本科</span><br /> 专业：
+						<span>计算机</span><br /> 基础：
+						<span>有</span><br /> 学习时长：
+						<span>教室十三</span><br /> 学习进度：
+						<span>C</span><br />
+						<img src="img/seat/delete.png" class="stu_delete_ico"/>
+					</div>
+				</div>
+				<!-------------------------------------------------------->
+			</div>
+			<!--11月10号-->
+			<!------------------------------------------------------------->
+			<!--账号管理-->
+			<div class="table_container">
+				<div class="search">
+					<img src="img/seat/search.png"/>
+					<input type="search" value="请输入用户名" onfocus="javascript:this.value = '';"
+					onblur="javascript:if(this.value == null || this.value == ''){this.value = '请输入用户名'}"/>
+				</div>
+				<div id = "table_css" class="table_css">
+					<table  id="admin_table" class="admin_table" cellspacing="0" cellpadding="0">
+				</table>
+				</div>
+				<div class="tableFooter">
+					<input type="button" value="增加" onclick="append_newTr();"/>
+					<div class="up_down">
+						<a href="#">上一页</a>
+						<label>1</label>
+						<a href="#">下一页</a>
+					</div>
+				</div>
+			</div>
+			<!------------------------------------------------------------->
+			<!--学员订座-->
+			<!------------------------------------------------------------->
+			<div class="bookingSeats">
+				<div class="bookingSeats_con">
+					<div class="search_stu">
+						<img src="img/seat/search.png" />
+						<input type="text" value="请输入姓名" onfocus="javascript:this.value = '';"
+							onblur="javascript:if(this.value == null || this.value == ''){this.value = '请输入姓名'}"/>
+						<!------------------------------------------------------------->
+					</div>
+					<div class="stu_list">
+						<ul>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+							<li>
+								<p><label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" />
+									&nbsp;<label>谭谈谈</label><input type="radio" name="stu_name" id="stu_name" /></p>
+							</li>
+						</ul>
+					</div>
+					<div class="operation">
+						<button type="button">订座</button>
+						<button type="button">取消</button>
+					</div>
+				</div class="bookingSeats_con">
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/index_admin.js"></script>
+	<script type="text/javascript" src="js/manage_admin.js"></script>
+</html>

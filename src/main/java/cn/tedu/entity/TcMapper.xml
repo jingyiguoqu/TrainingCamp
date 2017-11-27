@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.tedu.dao.TcDAO">
+	<select id="listTc" resultType="cn.tedu.entity.TrainingCamp">
+		SELECT
+		a.tcId,
+		a.type,
+		b.username,
+		a.className,
+		a.seatNum,
+		a.numPeople,
+		a.createdTime
+		from tcs_tc a,tcs_user b
+		WHERE
+		a.userId = b.userId
+		and a.TcState=true
+	</select>
+	<insert id="addTc" parameterType="cn.tedu.entity.TrainingCamp">
+		insert into tcs_tc values(0,#{className},#{type},#{userId},now(),#{seatType},25,0,true);
+	</insert>
+	<select id="findById" parameterType="int" resultType="cn.tedu.entity.TrainingCamp">
+		select * from tcs_tc where tcId=#{tcId}
+	</select>
+	<update id="update" parameterType="cn.tedu.entity.TrainingCamp">
+		update tcs_tc
+		SET className=#{className},userId=#{userId},
+			seatType=#{seatType},type=#{type}
+		WHERE tcId=#{tcId}
+	</update>
+	<update id="delete" parameterType="int">
+		UPDATE  tcs_tc
+		SET tcState=false
+		WHERE tcId=#{tcId}
+	</update>
+	<select id="updateTc" parameterType="int" resultType="cn.tedu.entity.TrainingCamp">
+		select 
+		a.tcId,
+		a.type,
+		b.username,
+		a.className,
+		a.seatNum,
+		a.numPeople,
+		a.createdTime
+		from tcs_tc a,tcs_user b
+		WHERE
+		a.userId = b.userId
+		AND a.tcId=#{tcId}
+	</select>
+	<select id="findUser" resultType="cn.tedu.entity.User">
+		select * from tcs_user
+	</select>
+	<update id="removestu" parameterType="int">
+		update tcs_tc set numPeople=numPeople-1 where tcId=#{tcId}
+	</update>
+	<update id="bookingstu" parameterType="int">
+		update tcs_tc set numPeople=numPeople+1 where tcId=#{tcId}
+	</update>
+	<!-- 历史训练营 -->
+	<select id="hislistTc" resultType="cn.tedu.entity.TrainingCamp">
+		SELECT
+		a.tcId,
+		a.type,
+		b.username,
+		a.className,
+		a.seatNum,
+		a.numPeople,
+		a.createdTime
+		from tcs_tc a,tcs_user b
+		WHERE
+		a.userId = b.userId
+		and a.TcState=false
+	</select>
+</mapper>	

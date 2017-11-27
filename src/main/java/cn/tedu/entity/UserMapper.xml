@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.tedu.dao.UserDAO">
+	<select id="findByUsername" parameterType="string" resultType="cn.tedu.entity.User">
+		SELECT * FROM tcs_user
+		WHERE username=#{username}
+	</select>
+	<select id="findAll" parameterType="int"  resultType="cn.tedu.entity.User">
+		SELECT
+		A.userId,
+		A.username,
+		A.password,
+		A.phone,
+		B.jobName
+		FROM
+		tcs_user AS A ,
+		tcs_job AS B
+		WHERE
+		A.jobId = B.jobId AND
+		A.userId > 1 AND
+		A.userstate = true
+		ORDER BY
+		A.userId DESC
+		LIMIT #{num}, 10
+	</select>
+	<insert id="save" parameterType="cn.tedu.entity.User">
+		INSERT INTO tcs_user
+		VALUES 
+		(0,#{username},#{password},#{jobId})
+	</insert>
+	<update id="update" parameterType="cn.tedu.entity.User">
+		UPDATE tcs_user
+		SET username=#{username},password=#{password},jobId=#{jobId},phone=#{phone}
+		WHERE userId=#{userId}
+	</update>
+	<update id="delete" parameterType="int">
+		UPDATE tcs_user 
+		set userstate=FALSE
+		where userId=#{userId}
+	</update>
+	<select id="findById" parameterType="int" resultType="cn.tedu.entity.User">
+		SELECT * FROM tcs_user
+		WHERE userId=#{userId}
+	</select>
+	<update id="update_pwd" parameterType="cn.tedu.entity.User">
+		UPDATE tcs_user
+		SET password=#{password}
+		WHERE username=#{username}
+	</update>
+	<select id="findIdbyjobName" parameterType="String" resultType="cn.tedu.entity.User">
+		SELECT
+		jobId
+		FROM
+		tcs_job
+		WHERE
+		jobName =#{jobName}
+	</select>
+	<select id="find" resultType="cn.tedu.entity.User">
+		select * from tcs_user
+	</select>
+	<select id="listJob" resultType="cn.tedu.entity.User">
+		select * from tcs_job
+		where jobId >1
+	</select>
+	<insert id="usersave" parameterType="cn.tedu.entity.User">
+	insert into tcs_user values(0,#{username},#{password},#{jobId},#{phone},true);
+	</insert>
+	<select id="usercount" resultType="int">
+		SELECT
+		Count(tcs_user.userstate) count
+		FROM
+		tcs_user
+	</select>
+</mapper>

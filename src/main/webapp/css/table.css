@@ -1,0 +1,132 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.table_container{
+	display: none;
+	background: white;
+	border: 1px #e5e5e5 solid;
+	border-radius: 10px;
+	margin: 0 auto;
+	float: right;
+	width: 70%;
+	height: 600px;
+	margin-right: 8%;
+	margin-top: 2%;
+}
+/*设置搜索框*/
+.search{
+	width: 20%;
+	display: flex;
+	align-content: center;
+	margin-top: 2%;
+	margin-left: 4%;
+	margin-bottom: 1%;
+	border: 1px #e5e5e5 solid;
+	border-radius: 10px;
+	padding: 0.5%;
+}
+.search img{
+	width: 12%;
+	height: 5%;
+}
+.search input{
+	width: 80%;
+	margin-left: 2%;
+	border: none;
+	font-family: "宋体";
+	font-size: 20px;
+}
+
+/*设置表格样式*/
+.table_css{
+	width: 94%;
+	height: 75%;
+	margin: 0 auto;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+}
+.table_css table{
+	width: 100%;
+	border-collapse: collapse;
+	font-family: '宋体';
+	font-size: 18px;
+	text-align: center;
+}
+.table_css table *{
+	border: 1px solid #f5f5f5;
+}
+.table_css *{
+	padding: 5px 2px;
+}
+.table_css input{
+	width:100%;
+	background-color: inherit;
+	padding: 0;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.table_css tr td{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.table_css tr a{
+	text-decoration: none;
+	border: none;
+}
+.edit_delete{
+	width: 45px;
+	font-size: 16px;
+}
+
+.up_down{
+	font-size: 18px;
+}
+.up_down a{
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.tableFooter{
+	width: 94%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.tableFooter input{
+	width: 10%;
+	height: 35px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	letter-spacing: 5px;
+	border: 1px solid #b5b5b5;
+	background: #8dcafb;
+	border-radius: 10px;
+	outline: none;
+	color: white;
+	margin-left: 4%;
+	margin-top: 1%;
+}
+.tableFooter input:hover{
+	background-color: #1197db;
+}
+.up_down{
+	margin-top: 1%;
+	margin-right: 4%;
+}
+#table_container_stu{
+	display: none;
+	background: white;
+	border: 1px #e5e5e5 solid;
+	border-radius: 10px;
+	margin: 0 auto;
+	float: right;
+	width: 70%;
+	height: 600px;
+	margin-right: 8%;
+	margin-top: 2%;
+}

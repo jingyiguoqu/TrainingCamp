@@ -1,0 +1,102 @@
+.bookingSeats{
+	display: none;
+	padding: 0;
+	margin: 0;
+}
+.bookingSeats_con{
+	border: 1px solid #b3b3b3;
+	background: white;
+	border-radius:10px;
+	position: absolute;
+	top: 18%;
+	left: 42%;
+	width: 30%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.search_stu img{
+	width: 15%;
+	height: 5%;
+	margin-left: 8%;
+}
+.search_stu {
+	border: 2px solid #8ecdff;
+	width: 50%;
+	margin-top: 5%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 30px;
+}
+.search_stu input{
+	color: #c4c4c4;
+	width: 80%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 43px;
+	*height: 43px;
+	padding: 2%;
+	padding-left: 4%;
+	margin-right: 8%;
+	font-size: 20px;
+	font-family: "宋体";
+	color: #707070;
+	border: none;
+	outline: none;
+}
+.search_stu input:focus{
+	color: black;
+}
+
+/*选择列表*/
+.stu_list{
+	overflow: scroll;
+	overflow-x: hidden;
+	width: 58%;
+	height: 50%;
+	text-align: center;
+	border: 1px solid #b3b3b3;
+	border-radius: 3%;
+}
+.stu_list ul{
+	list-style-type:none ;
+	font-family: "宋体";
+	font-size: 22px;
+}
+.stu_list li{
+	margin-top:4% ;
+}
+.stu_list li{
+	letter-spacing: 4px;
+}
+.stu_list li input{
+	margin-left: 5px;
+	width: 15px;
+	height: 15px;
+}
+.bookingSeats_con .operation{
+	width: 50%;
+	height: 10%;
+	margin-bottom: 10%;
+	display: flex;
+	justify-content: space-between;
+}
+.bookingSeats_con .operation button{
+	width: 40%;
+	height: 100%;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	letter-spacing: 5px;
+	border: 1px solid #b5b5b5;
+	background: #8dcafb;
+	border-radius: 10px;
+	outline: none;
+	color: white;
+}
+.bookingSeats_con .operation button:hover{
+	background: #1197db;
+}

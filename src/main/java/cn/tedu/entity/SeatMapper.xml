@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.tedu.dao.SeatDAO">
+	<!-- 点开训练营显示 -->
+	<select id="seatlist" parameterType="int" resultType="cn.tedu.entity.SeatInfo">
+		select b.tcId ,b.serialNum,b.studentId,a.name,a.learnPro ,c.username 
+		FROM tcs_seatInfo b,tcs_student a ,tcs_user c
+		where b.tcId=#{tcId}
+		AND b.seatState=1 
+		and a.studentId=b.studentId 
+		and a.userId=c.userId
+	</select>
+	<delete id="removestu" parameterType="cn.tedu.entity.SeatInfo">
+		DELETE FROM tcs_seatinfo where tcId=#{tcId} and studentId=#{studentId}
+	</delete>
+	<insert id="bookingstu" parameterType="cn.tedu.entity.SeatInfo">
+		insert into tcs_seatInfo values(#{tcId},#{serialNum},true,#{studentId},now());
+	</insert>
+</mapper>	
